@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Matrix | Secumax</title>
+    <link rel="stylesheet" href="../brand-styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../"
+        ><img
+          class="brand-logo"
+          src="../../images/logo.png"
+          alt="Secumax logo"
+        /><span class="brand-name">Secumax</span></a
+      >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Toggle navigation"
+      >
+        <span class="nav-toggle-bars"></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+     
+      <section
+        class="brand-hero"
+        style="--hero-background: url('https://images.unsplash.com/photo-1529265895721-65945a176cff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2N0dnxlbnwwfHwwfHx8MA%3D%3D')"
+      >
+        <div class="brand-hero-content">
+          <div class="brand-mark">
+            <img
+              class="brand-logo"
+              src="https://www.matrixcomsec.com/wp-content/uploads/2023/06/Matrix-ComSec_Logo.png"
+              alt="Matrix logo"
+            />
+          </div>
+          
+          <p>
+            Surveillance, access control, public address, and entrance-control
+            solutions.
+          </p>
+        </div>
+      </section>
+      <section class="section" id="solutions">
+        <div class="section-heading">
+          <p class="eyebrow">Product range</p>
+          <h2>Featured Matrix solutions</h2>
+          <p>Matrix Comsec delivers smart enterprise security, including high-definition IP cameras for proactive video monitoring and intelligent vehicle barrier integrations.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="https://www.matrixcomsec.com/lp/assets/img/dome-network-cameras.webp"
+                alt="Matrix camera"
+                width="200">
+            </div>
+            <h3>Network Cameras</h3>
+            <p>A smart, plug-and-play digital camera that streams high-definition video over your network for effortless, real-time security monitoring.</p>
+          </article>
+          <!-- <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/access_control.png"
+                alt="Hikvision access control"
+                width="200">
+            </div>
+            <h3>Access Control</h3>
+            <p>An intelligent digital system that replaces traditional keys with smart credentials to manage and log who enters your private spaces.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/entrance_control.png"
+                alt="Hikvision entrance control"
+                width="200">
+            </div>
+            <h3>Entrance Control</h3>
+            <p>Sleek, physical security barriers and automated gates that physically enforce access permissions to keep unauthorized visitors out</p>
+          </article> -->
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <span>Secumax Distributors</span
+        ><a href="mailto:sales@secumaxtech.com">sales@secumaxtech.com</a>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      navToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>

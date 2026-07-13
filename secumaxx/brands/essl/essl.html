@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>eSSL | Secumax</title>
+    <link rel="stylesheet" href="../brand-styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../"
+        ><img
+          class="brand-logo"
+          src="../../images/logo.png"
+          alt="Secumax logo"
+        /><span class="brand-name">Secumax</span></a
+      >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Toggle navigation"
+      >
+        <span class="nav-toggle-bars"></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+     
+      <section
+        class="brand-hero"
+        style="--hero-background: url('https://media.istockphoto.com/id/1469441484/photo/fingerprint-sign-in.jpg?s=612x612&w=0&k=20&c=50Ncyw6VPBY01Z9J5cBVohLu6aW_618TF1lgx_aSHBI=')"
+      >
+        <div class="brand-hero-content">
+          <div class="brand-mark">
+            <img
+              class="brand-logo"
+              src="./images/essl_logo.png"
+              alt="eSSL logo"
+            />
+          </div>
+          
+          <p>
+            Biometrics, access control, smart locks, and entrance-control
+            equipment.
+          </p>
+        </div>
+      </section>
+      <section class="section" id="solutions">
+        <div class="section-heading">
+          <p class="eyebrow">Product range</p>
+          <h2>Featured eSSL solutions</h2>
+          <p>eSSL provides smart security equipment including biometric readers for secure access, automated entrance barriers for vehicle management, and smart locks to protect your premises.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/biometric.png"
+                alt="eSSL biometric terminal"
+                width="100">
+            </div>
+            <h3>Biometric Terminals</h3>
+            <p>Devices that grant or deny access by scanning unique biological traits like fingerprints, facial features, or irises.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/turnstail.png"
+                alt="eSSL turnstile"
+                width="100">
+            </div>
+            <h3>Turnstiles</h3>
+            <p>Mechanical gates that control crowd flow by allowing only one person to pass through at a time.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <span>Secumax Distributors</span
+        ><a href="mailto:sales@secumaxtech.com">sales@secumaxtech.com</a>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      navToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>

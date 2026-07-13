@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ZKTeco | Secumax</title>
+    <link rel="stylesheet" href="../brand-styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../"
+        ><img
+          class="brand-logo"
+          src="../../images/logo.png"
+          alt="Secumax logo"
+        /><span class="brand-name">Secumax</span></a
+      >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Toggle navigation"
+      >
+        <span class="nav-toggle-bars"></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+     
+      <section
+        class="brand-hero"
+        style="--hero-background: url('https://images.unsplash.com/photo-1706476746683-1222454323f7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHVybnN0aWxlfGVufDB8fDB8fHww')"
+      >
+        <div class="brand-hero-content">
+          <div class="brand-mark">
+            <img
+              class="brand-logo"
+              src="./images/zkteco_logo.png"
+              alt="ZKTeco logo"
+            />
+          </div>
+          
+          <p>
+            Smart entrance-control systems for safe, efficient visitor flow.
+          </p>
+        </div>
+      </section>
+      <section class="section" id="solutions">
+        <div class="section-heading">
+          <p class="eyebrow">Product range</p>
+          <h2>Featured ZKTeco solutions</h2>
+          <p>ZKTeco provides smart entrance-control solutions including automated gates and barriers for secure, efficient visitor management.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/tripod_turnstile.png"
+                alt="ZKTeco tripod turnstile"
+                width="100">
+            </div>
+            <h3>Tripod Turnstile</h3>
+            <p>The ZKTeco tripod turnstile is a durable, waist-high pedestrian gate that integrates with biometric or RFID access systems to ensure secure, single-user entry.</p>
+          </article>
+          <!-- <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/access_control.png"
+                alt="Hikvision access control"
+                width="200">
+            </div>
+            <h3>Access Control</h3>
+            <p>An intelligent digital system that replaces traditional keys with smart credentials to manage and log who enters your private spaces.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/entrance_control.png"
+                alt="Hikvision entrance control"
+                width="200">
+            </div>
+            <h3>Entrance Control</h3>
+            <p>Sleek, physical security barriers and automated gates that physically enforce access permissions to keep unauthorized visitors out</p>
+          </article> -->
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <span>Secumax Distributors</span
+        ><a href="mailto:sales@secumaxtech.com">sales@secumaxtech.com</a>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      navToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>

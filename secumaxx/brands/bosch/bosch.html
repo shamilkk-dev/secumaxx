@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bosch | Secumax</title>
+    <link rel="stylesheet" href="../brand-styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../"
+        ><img
+          class="brand-logo"
+          src="../../images/logo.png"
+          alt="Secumax logo"
+        /><span class="brand-name">Secumax</span></a
+      >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Toggle navigation"
+      >
+        <span class="nav-toggle-bars"></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+     
+      <section
+        class="brand-hero"
+        style="--hero-background: url('https://media.boschbuildingtechnologies.com/fs/media/pb/images/products/fire_alarm_systems/fire_alarm_control_panels/fire-alarm-control-panels_res_1600x900.webp')"
+      >
+        <div class="brand-hero-content">
+          <div class="brand-mark">
+            <img
+              class="brand-logo"
+              src="https://videoselector.boschsecurity.com/images/Bosch_symbol_logo_black.svg"
+              alt="Bosch logo"
+            />
+          </div>
+          
+          <p>
+            Surveillance, access control, public address, and entrance-control
+            solutions.
+          </p>
+        </div>
+      </section>
+      <section class="section" id="solutions">
+        <div class="section-heading">
+          <p class="eyebrow">Product range</p>
+          <h2>Featured Bosch solutions</h2>
+          <p>Bosch Building Technologies focuses heavily on unified smart ecosystem integration. Their approach centers on linking intrusion, fire, video, and access hardware into a singular, highly intelligent dashboard.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/pa_system.png"
+                alt="Bosch PA system"
+                width="200">
+            </div>
+            <h3>PA Address Systems</h3>
+            <p>Highly intelligible, zone-controlled audio systems for crisp daily announcements and certified, automated emergency voice evacuations.</p>
+          </article>
+          <!-- <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/access_control.png"
+                alt="Bosch access control"
+                width="200">
+            </div>
+            <h3>Intrusion Detection</h3>
+            <p>Ultra-reliable, false-alarm-resistant alarm panels and motion sensors designed to instantly stop unauthorized breaches.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/entrance_control.png"
+                alt="Bosch entrance control"
+                width="200">
+            </div>
+            <h3>Access Control</h3>
+            <p>Scalable digital entry management that secures doors and logs employee access using advanced smart credentials.</p>
+          </article> -->
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <span>Secumax Distributors</span
+        ><a href="mailto:sales@secumaxtech.com">sales@secumaxtech.com</a>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      navToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hikvision | Secumax</title>
+    <link rel="stylesheet" href="../brand-styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../"
+        ><img
+          class="brand-logo"
+          src="../../images/logo.png"
+          alt="Secumax logo"
+        /><span class="brand-name">Secumax</span></a
+      >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Toggle navigation"
+      >
+        <span class="nav-toggle-bars"></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="#solutions">Solutions</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+     
+      <section
+        class="brand-hero"
+        style="--hero-background: url('https://www.hikvision.com/content/dam/hikvision/en/marketing/image/products/access-control-products/main-page/Access-control-web-banner_2023-update_fingerprint-terminal_Banner.jpg')"
+      >
+        <div class="brand-hero-content">
+          <div class="brand-mark">
+            <img
+              class="brand-logo"
+              src="./images/hikvision_logo.png"
+              alt="Hikvision logo"
+            />
+          </div>
+          
+          <p>
+            Surveillance, access control, public address, and entrance-control
+            solutions.
+          </p>
+        </div>
+      </section>
+      <section class="section" id="solutions">
+        <div class="section-heading">
+          <p class="eyebrow">Product range</p>
+          <h2>Featured Hikvision solutions</h2>
+          <p>Hikvision provides smart security products including network cameras for sharp video monitoring, automated entrance barriers for vehicle management, and biometric access control terminals to secure building entry.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/access_camera.png"
+                alt="Hikvision camera"
+                width="100">
+            </div>
+            <h3>Network Cameras</h3>
+            <p>A smart, plug-and-play digital camera that streams high-definition video over your network for effortless, real-time security monitoring.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/access_control.png"
+                alt="Hikvision access control"
+                width="200">
+            </div>
+            <h3>Access Control</h3>
+            <p>An intelligent digital system that replaces traditional keys with smart credentials to manage and log who enters your private spaces.</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image-placeholder">
+              <img
+                src="./images/entrance_control.png"
+                alt="Hikvision entrance control"
+                width="200">
+            </div>
+            <h3>Entrance Control</h3>
+            <p>Sleek, physical security barriers and automated gates that physically enforce access permissions to keep unauthorized visitors out</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <span>Secumax Distributors</span
+        ><a href="mailto:sales@secumaxtech.com">sales@secumaxtech.com</a>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      navToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>
